@@ -1,0 +1,2686 @@
+{
+  "targetName": "Plush Lesson Plan Typography",
+  "targetId": "plush-lesson-plan-typography",
+  "schemaVersion": "2.1",
+  "terminologyProfile": {
+    "domain": "real-time procedural Three.js plush typography",
+    "geometryTerms": [
+      "silhouette",
+      "extrude",
+      "bevel",
+      "counter",
+      "curve-sweep",
+      "surface normal",
+      "displacement"
+    ],
+    "materialTerms": [
+      "albedo",
+      "roughness",
+      "metalness",
+      "normal map",
+      "bump map",
+      "ambient occlusion",
+      "cavity"
+    ],
+    "lightingTerms": [
+      "key light",
+      "fill light",
+      "rim light",
+      "exposure",
+      "tone mapping",
+      "contact shadow"
+    ],
+    "descriptionRule": "Use measurable geometry and PBR terms; label hidden depth as an approximation."
+  },
+  "sourceImage": "references/plush-lesson-plan-reference.png",
+  "suitability": "conditional",
+  "scores": {
+    "object_isolation": 1,
+    "silhouette_readability": 3,
+    "depth_inference": 2,
+    "primitive_decomposition": 3,
+    "material_procedurality": 3,
+    "occlusion_risk": 1,
+    "interaction_fit": 3
+  },
+  "referenceCamera": {
+    "solved": false,
+    "fovDegrees": 32.0,
+    "aspect": 1.8224,
+    "orientation": {
+      "yaw": 0.0,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "positionHint": [
+      0.0,
+      0.0,
+      4.0
+    ],
+    "projection": "near-orthographic frontal product view",
+    "note": "The reference is nearly frontal with weak perspective. Use an orthographic or long-lens review camera and compare all three rows at the same framing."
+  },
+  "preSpecAssessment": {
+    "objectClass": {
+      "primaryType": "multi-object plush typographic installation",
+      "primaryDomain": "object",
+      "formLanguage": [
+        "geometric extruded glyphs",
+        "rounded pillow profile",
+        "soft inflated edges"
+      ],
+      "structureKind": [
+        "repeated independent meshes",
+        "three-line composition",
+        "real glyph counters"
+      ],
+      "motionPotential": [
+        "separate-and-reassemble",
+        "orbit",
+        "bounce",
+        "magnetic grouping",
+        "row-by-row reveal",
+        "soft-body squash and stretch",
+        "collision-driven compression",
+        "impact-wave neighbor response",
+        "fiber-breeze micro motion"
+      ],
+      "materialFamilies": [
+        "short-pile chenille or velour textile",
+        "stitched seam",
+        "matte ground plane"
+      ],
+      "notes": "Letters remain separate action-ready props. The generic connected-blob admission heuristic is intentionally conditional because the reference is a multi-object typography set."
+    },
+    "complexity": {
+      "tier": "moderate",
+      "scores": {
+        "silhouetteComplexity": 3,
+        "componentCount": 3,
+        "hierarchyDepth": 3,
+        "repetitionDensity": 3,
+        "materialLayerCount": 3,
+        "localDetailDensity": 3,
+        "occlusionRisk": 1,
+        "actionReadinessNeed": 3
+      },
+      "estimatedCounts": {
+        "macroComponents": 2,
+        "mesoComponents": 3,
+        "microFeatureGroups": 4,
+        "materialLayers": 3,
+        "repetitionSystems": 2
+      },
+      "reasoning": [
+        "Three lines and each glyph are separate visible units; use a line-group -> glyph -> detail hierarchy.",
+        "The exact spelling, punctuation, line breaks, counters, and rounded glyph silhouettes are identity-defining.",
+        "Inflated profile, seam, short-pile relief, per-glyph color, and contact shadow are distinct visual layers.",
+        "Independent pivots and stable local origins are required for the planned advertisement interactions."
+      ]
+    },
+    "specDepthDecision": {
+      "requiredDepth": "moderate",
+      "minimumComponentLevels": [
+        "macro",
+        "meso",
+        "micro"
+      ],
+      "needsRepetitionSystems": true,
+      "needsMaterialLocalOverrides": true,
+      "needsMultipleReviewViews": true,
+      "needsActionReadyHierarchy": true,
+      "rationale": "The object is a repeated system of simple glyph profiles with moderate hierarchy, material layering, and interaction requirements."
+    },
+    "unknownsToResolveBeforeImplementation": [],
+    "detailInventory": {
+      "scanMethod": "grid-3x3 plus semantic typography zones",
+      "targetMinDetails": 10,
+      "note": "Each detail maps to a real component id, local feature id, or material local override.",
+      "details": [
+        {
+          "id": "line-1-teachers",
+          "kind": "linework",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "line-top"
+          },
+          "evidenceRef": "full-object/top-row",
+          "confidence": 0.99
+        },
+        {
+          "id": "line-2-lesson",
+          "kind": "linework",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "line-middle"
+          },
+          "evidenceRef": "full-object/middle-row",
+          "confidence": 0.99
+        },
+        {
+          "id": "line-3-seconds",
+          "kind": "linework",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "line-bottom"
+          },
+          "evidenceRef": "full-object/bottom-row",
+          "confidence": 0.99
+        },
+        {
+          "id": "rounded-pillow-profile",
+          "kind": "bevel",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "paddedExtrusion"
+          },
+          "evidenceRef": "full-object/glyph-edges",
+          "confidence": 0.96
+        },
+        {
+          "id": "perimeter-stitching",
+          "kind": "stitch",
+          "mapsTo": {
+            "type": "material.localOverrides",
+            "ref": "seam-and-cavity"
+          },
+          "evidenceRef": "full-object/letter-contours",
+          "confidence": 0.91
+        },
+        {
+          "id": "short-pile-relief",
+          "kind": "ridge",
+          "mapsTo": {
+            "type": "material.localOverrides",
+            "ref": "short-pile-relief"
+          },
+          "evidenceRef": "full-object/front-faces",
+          "confidence": 0.88
+        },
+        {
+          "id": "per-letter-palette",
+          "kind": "linework",
+          "mapsTo": {
+            "type": "material.localOverrides",
+            "ref": "per-glyph-albedo"
+          },
+          "evidenceRef": "full-object/color-sequence",
+          "confidence": 0.98
+        },
+        {
+          "id": "glyph-negative-spaces",
+          "kind": "hole",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "realCounters"
+          },
+          "evidenceRef": "full-object/letter-counters",
+          "confidence": 0.96
+        },
+        {
+          "id": "contact-shadow-set",
+          "kind": "contour",
+          "mapsTo": {
+            "type": "material.localOverrides",
+            "ref": "soft-contact-shadow"
+          },
+          "evidenceRef": "full-object/grounding",
+          "confidence": 0.94
+        },
+        {
+          "id": "front-reference-camera",
+          "kind": "contour",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "referenceCamera"
+          },
+          "evidenceRef": "full-object/full-frame",
+          "confidence": 0.95
+        }
+      ]
+    },
+    "anatomy": {
+      "applies": false
+    },
+    "sourceImage": "references/plush-lesson-plan-reference.png"
+  },
+  "qualityContract": {
+    "qualityBar": "moderate",
+    "definitionOfDone": [
+      "The three-line phrase is spelled exactly and matches the reference line breaks, spacing rhythm, and overall width hierarchy.",
+      "Every glyph is an independent rounded padded volume with a real counter where the reference shows one.",
+      "Fabric reads as short-pile textile rather than smooth plastic under neutral and grazing light.",
+      "Seams, color-per-glyph variation, contact shadows, and action-ready pivots are present and inspectable.",
+      "Each glyph has a hybrid rigid-proxy plus soft-body response: collision impulse, squash/stretch, twist, spring recovery, and independently tunable softness/bounce.",
+      "The visible shell also carries localized vertex deformation: a bend field and front-surface dimple that follow the impact anchor instead of only scaling the whole group.",
+      "A deterministic showcase can ripple impacts through neighboring letters without merging their physics bodies."
+    ],
+    "minimumSpecDepth": {
+      "macroComponents": 2,
+      "mesoComponents": 3,
+      "microFeatureGroups": 6,
+      "materialLayers": 2,
+      "repetitionSystems": 2,
+      "reviewViewpoints": 3
+    },
+    "featureGroups": [
+      {
+        "id": "typography-layout",
+        "name": "Exact inscription layout and line hierarchy",
+        "required": true,
+        "qualityCriteria": [
+          "The exact phrase, punctuation, three line breaks, row widths, and inter-letter spacing are represented as editable data."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "wrong spelling",
+          "fused words",
+          "incorrect row balance"
+        ]
+      },
+      {
+        "id": "padded-glyph-silhouette",
+        "name": "Rounded padded glyph silhouette and counters",
+        "required": true,
+        "qualityCriteria": [
+          "Glyphs have readable rounded profiles, inflated bevel transitions, correct counters, and visible thickness from 3/4 view."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "flat extruded text",
+          "sharp font corners",
+          "missing counters"
+        ]
+      },
+      {
+        "id": "textile-surface",
+        "name": "Short-pile fabric, seam, and cavity response",
+        "required": true,
+        "qualityCriteria": [
+          "Independent albedo, roughness, normal/height, AO, seam, and local variation layers reproduce the tactile reference response."
+        ],
+        "evidenceRefs": [
+          "full-object",
+          "review/material-evidence/report.json"
+        ],
+        "failureModes": [
+          "smooth plastic read",
+          "flat color",
+          "missing perimeter stitch"
+        ]
+      },
+      {
+        "id": "palette-and-grounding",
+        "name": "Per-glyph palette and soft contact shadows",
+        "required": true,
+        "qualityCriteria": [
+          "Adjacent glyphs cycle through the observed saturated palette and remain separated from the warm ground by soft shadows."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "one flat material",
+          "lost color rhythm",
+          "floating letters"
+        ]
+      }
+    ],
+    "visualDeltaChecks": [
+      "text and line-break delta",
+      "glyph silhouette and counter delta",
+      "seam and textile response delta",
+      "color sequence and contact-shadow delta"
+    ],
+    "antiShallowSpecRules": [
+      "Do not fuse glyphs into one mesh.",
+      "Do not replace counters with painted black shapes.",
+      "Do not reuse albedo as roughness, height, normal, or AO.",
+      "Do not remove pivots or stable names from repeated glyph instances."
+    ],
+    "mustNotDo": [
+      "Do not claim exact font identity from one generated reference.",
+      "Do not project baked shadows onto the animated letters."
+    ]
+  },
+  "qualityTargets": {
+    "targetFidelity": 0.7,
+    "mustMatch": [
+      "exact inscription content and layout",
+      "rounded padded glyph silhouette",
+      "fabric material response",
+      "seam and counter details",
+      "per-glyph palette",
+      "soft-body squash/stretch and spring recovery",
+      "collision-driven neighboring impact wave",
+      "localized bend and dimple deformation",
+      "magnetic word assembly from independent glyph pivots"
+    ],
+    "niceToHave": [
+      "individual fiber strands",
+      "subtle fabric compression at contact points"
+    ],
+    "fpsTarget": 60,
+    "reviewViewpoints": [
+      "front",
+      "three-quarter",
+      "side"
+    ]
+  },
+  "selfCorrectLoop": {
+    "enabled": true,
+    "visualAcceptance": {
+      "reviewer": "ai-vision",
+      "threshold": 0.7,
+      "comparisonArtifactRequired": true,
+      "layerScoresRequired": true,
+      "requiredLayerScores": [
+        "silhouetteProportion",
+        "componentStructure",
+        "formDetail",
+        "materialSurface",
+        "lightingCamera"
+      ],
+      "featureReviewPolicy": {
+        "enabled": true,
+        "reviewUnit": "semantic-subsystem",
+        "maxCriticalFeaturesPerPass": 5,
+        "maxImportantFeaturesPerPass": 3,
+        "criticalDefaultThreshold": 0.8,
+        "importantAverageThreshold": 0.65,
+        "adaptiveEscalation": true,
+        "singleImagePairOnly": true,
+        "selectionRule": "Review the phrase layout, glyph silhouette, textile surface, and palette as grouped semantic systems."
+      }
+    },
+    "screenshotPolicy": {
+      "requiredForPasses": [
+        "blockout",
+        "structural-pass",
+        "form-refinement",
+        "material-pass",
+        "surface-pass",
+        "lighting-pass",
+        "interaction-pass"
+      ],
+      "preferredCapture": "browser screenshot",
+      "fallbackCapture": "user-supplied screenshot path",
+      "minimumEvidence": "Each visual pass requires a same-view reference/render comparison, AI vision score, layer scores, and mismatch critique.",
+      "reviewPairRule": "Compare the same frontal camera for the front reference; use dedicated 3/4 and side renders for depth review.",
+      "acceptanceAuthority": "AI vision review of the comparison sheet."
+    },
+    "reviewAfterPasses": [
+      "blockout",
+      "structural-pass",
+      "form-refinement",
+      "material-pass",
+      "surface-pass",
+      "lighting-pass",
+      "interaction-pass"
+    ],
+    "allowedActions": [
+      "continue",
+      "refine-spec",
+      "refine-code",
+      "request-input",
+      "stop"
+    ]
+  },
+  "featureReviewTargets": [
+    {
+      "id": "text-layout",
+      "name": "Exact text and three-line layout",
+      "tier": "critical",
+      "passIds": [
+        "blockout",
+        "structural-pass"
+      ],
+      "minimumScore": 0.8,
+      "mustPass": true,
+      "componentRefs": [
+        "typography-layout",
+        "line-top",
+        "line-middle",
+        "line-bottom"
+      ],
+      "evidenceRefs": [
+        "full-object"
+      ]
+    },
+    {
+      "id": "padded-glyph-silhouette",
+      "name": "Padded glyph silhouette and real counters",
+      "tier": "critical",
+      "passIds": [
+        "blockout",
+        "form-refinement"
+      ],
+      "minimumScore": 0.8,
+      "mustPass": true,
+      "componentRefs": [
+        "glyph-template"
+      ],
+      "evidenceRefs": [
+        "full-object"
+      ]
+    },
+    {
+      "id": "textile-surface",
+      "name": "Short-pile fabric and perimeter seam",
+      "tier": "critical",
+      "passIds": [
+        "material-pass",
+        "surface-pass"
+      ],
+      "minimumScore": 0.75,
+      "mustPass": true,
+      "componentRefs": [
+        "seam-detail",
+        "pile-relief"
+      ],
+      "evidenceRefs": [
+        "full-object",
+        "review/material-evidence/report.json"
+      ]
+    },
+    {
+      "id": "palette-sequence",
+      "name": "Per-glyph color rhythm",
+      "tier": "important",
+      "passIds": [
+        "material-pass"
+      ],
+      "minimumScore": 0.65,
+      "componentRefs": [
+        "glyph-template"
+      ],
+      "evidenceRefs": [
+        "full-object"
+      ]
+    },
+    {
+      "id": "interaction-pivots",
+      "name": "Independent pivots for separation and reassembly",
+      "tier": "important",
+      "passIds": [
+        "interaction-pass"
+      ],
+      "minimumScore": 0.65,
+      "componentRefs": [
+        "typography-layout",
+        "line-top",
+        "line-middle",
+        "line-bottom",
+        "glyph-template"
+      ],
+      "evidenceRefs": [
+        "full-object"
+      ]
+    }
+  ],
+  "coordinateFrame": {
+    "front": "camera-facing plush fabric side",
+    "up": "image up direction",
+    "scaleReference": "top row cap height = 1.0 world unit; all rows share the same glyph scale basis",
+    "depthAxis": "positive local z toward camera"
+  },
+  "silhouette": {
+    "boundingShape": "three centered rows of independent rounded extruded glyph profiles",
+    "aspectRatios": [
+      1.8224,
+      0.96,
+      0.46,
+      0.76
+    ],
+    "symmetry": "individual glyphs are mostly bilateral; composition is horizontally centered but row widths differ",
+    "dominantCurves": [
+      "rounded outer glyph corners",
+      "inflated front-to-side transitions",
+      "rounded counters"
+    ],
+    "negativeSpaces": [
+      "A counters",
+      "O counters",
+      "P counter",
+      "C/H/E internal cut regions",
+      "inter-letter gaps",
+      "row gaps"
+    ],
+    "landmarks": [
+      "colon after TEACHERS",
+      "centered bottom row",
+      "full-width middle row",
+      "separate plush silhouettes"
+    ]
+  },
+  "viewEvidence": [
+    {
+      "id": "full-object",
+      "view": "primary frontal reference",
+      "imageRegion": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 1.0,
+        "units": "normalized"
+      },
+      "observations": [
+        "Three rows are fully visible.",
+        "Letters are separate and evenly grounded.",
+        "Front camera hides the back and most side depth."
+      ],
+      "confidence": 0.96
+    }
+  ],
+  "componentTree": [
+    {
+      "id": "root",
+      "name": "Plush Lesson Plan Scene",
+      "level": "macro",
+      "role": "root",
+      "importance": 1.0,
+      "confidence": 0.96,
+      "primitive": "instanced-cluster",
+      "topologyClass": "material-only",
+      "topologyRationale": "The root is a named scene pivot; visible geometry is owned by independent row and glyph children.",
+      "parent": null,
+      "dimensions": {
+        "width": 5.4,
+        "height": 3.1,
+        "depth": 0.34,
+        "units": "relative",
+        "confidence": 0.86
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "root",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.96
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "compound-typography",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "typography-scene",
+          "seamRefs": [],
+          "detachableFragments": [
+            "line-top",
+            "line-middle",
+            "line-bottom"
+          ],
+          "breakImpulse": 0,
+          "debrisMaterial": "fabric"
+        }
+      },
+      "materialLayers": [],
+      "localFeatures": [
+        {
+          "id": "referenceCamera",
+          "kind": "camera-framing",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "notes": "Scene pivot only."
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "fidelityTier": "blockout"
+    },
+    {
+      "id": "typography-layout",
+      "name": "Editable three-line typography layout",
+      "level": "macro",
+      "role": "collection",
+      "importance": 1.0,
+      "confidence": 0.99,
+      "primitive": "instanced-cluster",
+      "topologyClass": "material-only",
+      "topologyRationale": "This named collection owns independent row pivots and repeated glyph instances rather than a fused surface.",
+      "parent": "root",
+      "dimensions": {
+        "width": 5.4,
+        "height": 3.1,
+        "depth": 0.34,
+        "units": "relative",
+        "confidence": 0.9
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "typography-controller",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": true,
+          "twist": false,
+          "detach": true,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [
+          {
+            "id": "topRow",
+            "localPosition": [
+              0,
+              0.94,
+              0
+            ],
+            "localRotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "middleRow",
+            "localPosition": [
+              0,
+              0.0,
+              0
+            ],
+            "localRotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "bottomRow",
+            "localPosition": [
+              0,
+              -0.86,
+              0
+            ],
+            "localRotation": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "compound-rows",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "typography-rows",
+          "seamRefs": [],
+          "detachableFragments": [
+            "line-top",
+            "line-middle",
+            "line-bottom"
+          ],
+          "breakImpulse": 0,
+          "debrisMaterial": "fabric"
+        }
+      },
+      "materialLayers": [],
+      "localFeatures": [
+        {
+          "id": "exactPhrase",
+          "kind": "linework",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        },
+        {
+          "id": "lineBreaks",
+          "kind": "linework",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "notes": "Controller group; glyphs provide visible surfaces."
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "fidelityTier": "blockout"
+    },
+    {
+      "id": "line-top",
+      "name": "Top row — TEACHERS colon",
+      "level": "meso",
+      "role": "row",
+      "importance": 1.0,
+      "confidence": 0.99,
+      "primitive": "instanced-cluster",
+      "topologyClass": "material-only",
+      "topologyRationale": "A row pivot groups independent letter meshes while preserving each glyph as a detachable object.",
+      "parent": "typography-layout",
+      "dimensions": {
+        "width": 5.0,
+        "height": 1.0,
+        "depth": 0.34,
+        "units": "relative",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.94,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "row-top",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "confidence": 0.97
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": true,
+          "twist": true,
+          "detach": true,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "compound-glyph-row",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "row-top",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0,
+          "debrisMaterial": "fabric"
+        }
+      },
+      "materialLayers": [],
+      "localFeatures": [
+        {
+          "id": "topRowText",
+          "kind": "linework",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        },
+        {
+          "id": "colonDots",
+          "kind": "contour",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "notes": "TEACHERS: with two separate plush punctuation dots."
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "fidelityTier": "blockout"
+    },
+    {
+      "id": "line-middle",
+      "name": "Middle row — HOW TO CREATE A LESSON PLAN",
+      "level": "meso",
+      "role": "row",
+      "importance": 1.0,
+      "confidence": 0.99,
+      "primitive": "instanced-cluster",
+      "topologyClass": "material-only",
+      "topologyRationale": "A separate row pivot preserves the long line's spacing and lets the row move independently during the ad.",
+      "parent": "typography-layout",
+      "dimensions": {
+        "width": 5.4,
+        "height": 0.67,
+        "depth": 0.34,
+        "units": "relative",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "row-middle",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "confidence": 0.97
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": true,
+          "twist": true,
+          "detach": true,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "compound-glyph-row",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "row-middle",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0,
+          "debrisMaterial": "fabric"
+        }
+      },
+      "materialLayers": [],
+      "localFeatures": [
+        {
+          "id": "middleRowText",
+          "kind": "linework",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "notes": "Longest line; tight spacing must stay readable."
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "fidelityTier": "blockout"
+    },
+    {
+      "id": "line-bottom",
+      "name": "Bottom row — IN 30 SECONDS",
+      "level": "meso",
+      "role": "row",
+      "importance": 1.0,
+      "confidence": 0.99,
+      "primitive": "instanced-cluster",
+      "topologyClass": "material-only",
+      "topologyRationale": "A centered shorter row pivot preserves the reference's vertical hierarchy and supports a separate reveal beat.",
+      "parent": "typography-layout",
+      "dimensions": {
+        "width": 4.1,
+        "height": 0.72,
+        "depth": 0.34,
+        "units": "relative",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.86,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "row-bottom",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "confidence": 0.97
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": true,
+          "twist": true,
+          "detach": true,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "compound-glyph-row",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "row-bottom",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0,
+          "debrisMaterial": "fabric"
+        }
+      },
+      "materialLayers": [],
+      "localFeatures": [
+        {
+          "id": "bottomRowText",
+          "kind": "linework",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.0,
+        "microRoughness": 0.0,
+        "bumpAmplitude": 0.0,
+        "notes": "Centered shorter line with visible numeral group."
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "fidelityTier": "blockout"
+    },
+    {
+      "id": "glyph-template",
+      "name": "Reusable padded glyph template",
+      "level": "meso",
+      "role": "glyph",
+      "importance": 1.0,
+      "confidence": 0.95,
+      "primitive": "extrude",
+      "topologyClass": "conforming-shell",
+      "topologyRationale": "Each letter is an extruded 2D glyph profile with real counters, rounded perimeter bevels, and a shallow padded side wall.",
+      "parent": "typography-layout",
+      "dimensions": {
+        "width": 0.46,
+        "height": 0.78,
+        "depth": 0.24,
+        "units": "relative",
+        "confidence": 0.86
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometryDescriptor": {
+        "topologyIntent": "rounded extruded glyph with inflated bevel transition",
+        "edgeTreatment": {
+          "type": "bevel",
+          "bevelRadius": 0.07,
+          "segments": 6
+        },
+        "deformationStack": [
+          "pillow-inflate",
+          "soft-edge-normal"
+        ],
+        "uvStrategy": "generated object-local coordinates",
+        "normalStrategy": "smooth front and side normals with independent textile normal"
+      },
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(199, 63, 30, 1.0)",
+        "secondaryAlbedo": "rgba(241, 184, 80, 1.0)",
+        "materialClass": "fabric",
+        "materialClassConfidence": 0.86,
+        "mode": "per-glyph-palette",
+        "colorGradient": {
+          "type": "linear",
+          "stops": [
+            {
+              "position": 0.0,
+              "color": "rgba(255, 110, 70, 1.0)"
+            },
+            {
+              "position": 0.5,
+              "color": "rgba(199, 63, 30, 1.0)"
+            },
+            {
+              "position": 1.0,
+              "color": "rgba(110, 30, 20, 1.0)"
+            }
+          ]
+        },
+        "notes": "Use a palette slot per glyph rather than one averaged material."
+      },
+      "actionProfile": {
+        "animationRole": "detachable-glyph-template",
+        "pivot": {
+          "mode": "glyph-center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "confidence": 0.94
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": true,
+          "twist": true,
+          "detach": true,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [
+          {
+            "id": "glyphOrigin",
+            "localPosition": [
+              0,
+              0,
+              0
+            ],
+            "localRotation": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "collider": {
+          "type": "dynamic-cuboid-per-glyph",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": false
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "glyph-detachables",
+          "seamRefs": [
+            "perimeter-stitch"
+          ],
+          "detachableFragments": [],
+          "breakImpulse": 0,
+          "debrisMaterial": "fabric"
+        }
+      },
+      "material": "fabric",
+      "materialLayers": [
+        "fabric",
+        "seam"
+      ],
+      "localFeatures": [
+        {
+          "id": "paddedExtrusion",
+          "kind": "bevel",
+          "geometryEffect": "inflated extrude and bevel",
+          "depth": 0.24,
+          "radius": 0.07,
+          "segments": 6,
+          "evidenceRefs": [
+            "full-object"
+          ]
+        },
+        {
+          "id": "realCounters",
+          "kind": "hole",
+          "geometryEffect": "real glyph path holes",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        },
+        {
+          "id": "perimeter-stitch",
+          "kind": "stitch",
+          "geometryEffect": "raised contour tube following glyph path",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        },
+        {
+          "id": "glyphOrigin",
+          "kind": "contour",
+          "geometryEffect": "stable local pivot at glyph center",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        },
+        {
+          "id": "colorSlot",
+          "kind": "linework",
+          "geometryEffect": "per-instance palette index",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        },
+        {
+          "id": "collisionProxy",
+          "kind": "contour",
+          "geometryEffect": "rounded compound collider proxy",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.78,
+        "microRoughness": 0.12,
+        "bumpAmplitude": 0.22,
+        "normalPattern": "short-pile textile",
+        "displacementPattern": "subtle padded front inflation",
+        "occlusionPattern": "seam and counter cavity",
+        "edgeWearPattern": "compressed darker seam edge",
+        "notes": "The template is instantiated for every glyph and punctuation mark."
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "fidelityTier": "form-refinement"
+    },
+    {
+      "id": "seam-detail",
+      "name": "Raised perimeter stitching",
+      "level": "micro",
+      "role": "surface",
+      "importance": 0.9,
+      "confidence": 0.91,
+      "primitive": "curve-sweep",
+      "topologyClass": "surface-relief",
+      "topologyRationale": "The seam is a shallow raised contour following the glyph perimeter and counter paths; it affects close-up form but not the macro silhouette.",
+      "parent": "glyph-template",
+      "attachment": {
+        "parentId": "glyph-template",
+        "parentSocket": "glyphOrigin",
+        "localStart": [
+          0,
+          0,
+          0.12
+        ],
+        "localEnd": [
+          0,
+          0,
+          0.12
+        ],
+        "contactType": "embedded",
+        "embedDepth": 0.02,
+        "overlap": 0.02,
+        "gapTolerance": 0.002,
+        "evidenceRefs": [
+          "full-object"
+        ]
+      },
+      "dimensions": {
+        "width": 0.42,
+        "height": 0.74,
+        "depth": 0.025,
+        "units": "relative",
+        "confidence": 0.8
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0.125
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometryDescriptor": {
+        "topologyIntent": "raised contour tube with rounded cross-section",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.012,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "generated curve coordinates",
+        "normalStrategy": "smooth tube normals"
+      },
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(110, 30, 20, 1.0)",
+        "secondaryAlbedo": "rgba(180, 70, 45, 1.0)",
+        "materialClass": "fabric",
+        "materialClassConfidence": 0.84,
+        "mode": "seam-contrast",
+        "notes": "Darker raised border defines the plush contour without becoming a hard plastic rim."
+      },
+      "actionProfile": {
+        "animationRole": "glyph-surface-detail",
+        "pivot": {
+          "mode": "inherit-glyph",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "confidence": 0.9
+        },
+        "transformChannels": {
+          "translate": false,
+          "rotate": false,
+          "scale": true,
+          "bend": true,
+          "twist": true,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "none",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": true
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "glyph-surface",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0,
+          "debrisMaterial": "seam"
+        }
+      },
+      "material": "seam",
+      "materialLayers": [
+        "seam"
+      ],
+      "localFeatures": [
+        {
+          "id": "seamAndCavity",
+          "kind": "stitch",
+          "geometryEffect": "raised contour and darker cavity response",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.72,
+        "microRoughness": 0.08,
+        "bumpAmplitude": 0.12,
+        "normalPattern": "stitched ridge",
+        "displacementPattern": "raised seam tube",
+        "occlusionPattern": "seam cavity",
+        "notes": "Repeated per glyph; keep draw-call cost bounded by instancing or shared geometry."
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "fidelityTier": "surface-pass"
+    },
+    {
+      "id": "pile-relief",
+      "name": "Short-pile textile relief",
+      "level": "micro",
+      "role": "surface",
+      "importance": 0.85,
+      "confidence": 0.88,
+      "primitive": "instanced-cluster",
+      "topologyClass": "surface-relief",
+      "topologyRationale": "Fine textile relief is represented by independent procedural height/normal response rather than by a fused change to the glyph silhouette.",
+      "parent": "glyph-template",
+      "dimensions": {
+        "width": 0.4,
+        "height": 0.7,
+        "depth": 0.008,
+        "units": "relative",
+        "confidence": 0.72
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0.13
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometryDescriptor": {
+        "topologyIntent": "procedural micro-relief layer",
+        "edgeTreatment": {
+          "type": "none",
+          "bevelRadius": 0.0,
+          "segments": 1
+        },
+        "deformationStack": [],
+        "uvStrategy": "object-local fabric coordinates",
+        "normalStrategy": "independent procedural normal and roughness"
+      },
+      "colorMaterialRecipe": {
+        "dominantAlbedo": "rgba(199, 63, 30, 1.0)",
+        "secondaryAlbedo": "rgba(241, 184, 80, 1.0)",
+        "materialClass": "fabric",
+        "materialClassConfidence": 0.86,
+        "mode": "procedural-fiber-relief",
+        "notes": "Relief is subtle and relightable; do not use a flat painted noise layer."
+      },
+      "actionProfile": {
+        "animationRole": "glyph-material-layer",
+        "pivot": {
+          "mode": "inherit-glyph",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "confidence": 0.88
+        },
+        "transformChannels": {
+          "translate": false,
+          "rotate": false,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "none",
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "isTrigger": true
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "glyph-material",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0,
+          "debrisMaterial": "fabric"
+        }
+      },
+      "material": "fabric",
+      "materialLayers": [
+        "fabric"
+      ],
+      "localFeatures": [
+        {
+          "id": "shortPileRelief",
+          "kind": "ridge",
+          "geometryEffect": "independent high-frequency normal and roughness",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.8,
+        "microRoughness": 0.14,
+        "bumpAmplitude": 0.22,
+        "normalPattern": "multi-band short pile",
+        "displacementPattern": "none",
+        "occlusionPattern": "fiber cavity",
+        "notes": "Use deterministic noise so the texture remains stable during interaction."
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "fidelityTier": "surface-pass"
+    }
+  ],
+  "materials": [
+    {
+      "id": "fabric",
+      "name": "Short-pile plush fabric",
+      "type": "physical",
+      "qualityTier": "hero",
+      "shaderModel": "MeshPhysicalMaterial with independent procedural albedo, roughness, normal, height, and AO response",
+      "baseColor": "#C73F1E",
+      "color": "#C73F1E",
+      "albedo": {
+        "dominant": "#C73F1E",
+        "secondary": [
+          "#E87031",
+          "#F1B850",
+          "#5E9CC7",
+          "#8B5AAE",
+          "#E8839E",
+          "#37B8B2"
+        ],
+        "samplingNotes": "Palette sampled from visible plush glyphs; final color is selected per glyph instance."
+      },
+      "colorVariation": {
+        "palette": [
+          "#C73F1E",
+          "#E87031",
+          "#F1B850",
+          "#79A84B",
+          "#4F91C9",
+          "#8B5AAE",
+          "#E8839E",
+          "#37B8B2"
+        ],
+        "pattern": "per-glyph palette with low-amplitude pile variation",
+        "amplitude": 0.12,
+        "heightCorrelation": 0.15
+      },
+      "textureResolution": 1024,
+      "textureProjection": {
+        "mode": "object-local procedural",
+        "repeat": [
+          3.0,
+          3.0
+        ],
+        "anisotropy": 8,
+        "texelDensityIntent": "Keep pile scale stable across all glyph instances."
+      },
+      "surfaceFrequencyBands": [
+        {
+          "id": "macro",
+          "frequency": 2.0,
+          "amplitude": 0.06,
+          "role": "inflated padded value gradient"
+        },
+        {
+          "id": "meso",
+          "frequency": 18.0,
+          "amplitude": 0.08,
+          "role": "compressed plush and seam-adjacent breakup"
+        },
+        {
+          "id": "micro",
+          "frequency": 96.0,
+          "amplitude": 0.04,
+          "role": "short pile highlight breakup"
+        }
+      ],
+      "roughness": {
+        "base": 0.8,
+        "variation": 0.12,
+        "map": "independent-plush-roughness",
+        "localResponse": "slightly lower on broad pile highlights and higher in compressed seam/cavity zones"
+      },
+      "metalness": {
+        "base": 0.0,
+        "variation": 0.0
+      },
+      "normal": {
+        "pattern": "independent short-pile normal",
+        "strength": 0.22,
+        "scale": 96.0,
+        "space": "tangent"
+      },
+      "bump": {
+        "pattern": "fiber-cluster bump",
+        "amplitude": 0.12,
+        "scale": 64.0
+      },
+      "displacement": {
+        "pattern": "padded front macro inflation",
+        "amplitude": 0.012,
+        "scale": 1.0,
+        "silhouetteAffects": false
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.38,
+        "contactShadowBias": 0.28,
+        "map": "independent-plush-ao",
+        "notes": "Deepen counters, perimeter seam cavity, inter-letter gaps, and ground contact."
+      },
+      "wear": {
+        "edgeWear": 0.03,
+        "scratches": [],
+        "chips": []
+      },
+      "dirt": {
+        "amount": 0.02,
+        "cavityBias": 0.18,
+        "color": "#6A2B26"
+      },
+      "localOverrides": [
+        {
+          "id": "per-glyph-albedo",
+          "region": "glyph-instance",
+          "baseColor": "palette-slot",
+          "evidenceRefs": [
+            "full-object"
+          ]
+        },
+        {
+          "id": "short-pile-relief",
+          "region": "front-and-side-faces",
+          "normalStrength": 0.22,
+          "roughness": 0.82,
+          "evidenceRefs": [
+            "full-object",
+            "review/material-evidence/report.json"
+          ]
+        },
+        {
+          "id": "seam-and-cavity",
+          "region": "glyph-perimeter-and-counters",
+          "roughness": 0.86,
+          "aoStrength": 0.42,
+          "evidenceRefs": [
+            "full-object"
+          ]
+        },
+        {
+          "id": "soft-contact-shadow",
+          "region": "ground-contact",
+          "aoStrength": 0.4,
+          "evidenceRefs": [
+            "full-object"
+          ]
+        }
+      ],
+      "referencePbr": {
+        "usable": true,
+        "confidence": 0.86,
+        "estimatedFidelity": 0.86,
+        "sourceImage": "review/zone-r0c0.png",
+        "maps": {
+          "albedo": {
+            "url": "review/material-evidence/plush-fabric_albedo.png",
+            "channel": "albedo"
+          },
+          "roughness": {
+            "url": "review/material-evidence/plush-fabric_roughness.png",
+            "channel": "roughness"
+          },
+          "height": {
+            "url": "review/material-evidence/plush-fabric_height.png",
+            "channel": "height"
+          },
+          "normal": {
+            "url": "review/material-evidence/plush-fabric_normal.png",
+            "channel": "normal"
+          },
+          "ao": {
+            "url": "review/material-evidence/plush-fabric_ao.png",
+            "channel": "ao"
+          }
+        }
+      },
+      "notes": "Single-image PBR extraction is reference-derived evidence, not exact inverse rendering."
+    },
+    {
+      "id": "seam",
+      "name": "Darker stitched seam",
+      "type": "physical",
+      "qualityTier": "utility",
+      "shaderModel": "MeshPhysicalMaterial dielectric textile accent",
+      "baseColor": "#7B2E27",
+      "color": "#7B2E27",
+      "albedo": {
+        "dominant": "#7B2E27",
+        "secondary": [
+          "#B34F3A"
+        ],
+        "samplingNotes": "Darker edge/cavity response observed around the plush perimeter."
+      },
+      "colorVariation": {
+        "palette": [
+          "#7B2E27",
+          "#B34F3A"
+        ],
+        "pattern": "raised seam contrast",
+        "amplitude": 0.1,
+        "heightCorrelation": 0.2
+      },
+      "textureResolution": 1024,
+      "textureProjection": {
+        "mode": "object-local",
+        "repeat": [
+          4.0,
+          4.0
+        ],
+        "anisotropy": 4,
+        "texelDensityIntent": "Stable stitch scale across repeated glyphs."
+      },
+      "surfaceFrequencyBands": [
+        {
+          "id": "macro",
+          "frequency": 2.0,
+          "amplitude": 0.02,
+          "role": "seam path"
+        },
+        {
+          "id": "meso",
+          "frequency": 24.0,
+          "amplitude": 0.05,
+          "role": "stitched ridge"
+        },
+        {
+          "id": "micro",
+          "frequency": 96.0,
+          "amplitude": 0.02,
+          "role": "thread breakup"
+        }
+      ],
+      "roughness": {
+        "base": 0.76,
+        "variation": 0.08,
+        "map": "seam-independent-roughness",
+        "localResponse": "higher in the cavity adjacent to the raised seam"
+      },
+      "metalness": {
+        "base": 0.0,
+        "variation": 0.0
+      },
+      "normal": {
+        "pattern": "stitched ridge normal",
+        "strength": 0.14,
+        "scale": 48.0,
+        "space": "tangent"
+      },
+      "bump": {
+        "pattern": "thread micro-bump",
+        "amplitude": 0.08,
+        "scale": 64.0
+      },
+      "displacement": {
+        "pattern": "raised contour geometry",
+        "amplitude": 0.01,
+        "scale": 1.0,
+        "silhouetteAffects": false
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.32,
+        "contactShadowBias": 0.25,
+        "map": "seam-ao",
+        "notes": "Keep seam readable without a hard plastic outline."
+      },
+      "localOverrides": [
+        {
+          "id": "seam-and-cavity",
+          "region": "glyph-contour",
+          "roughness": 0.82,
+          "evidenceRefs": [
+            "full-object"
+          ]
+        }
+      ],
+      "notes": "Utility accent material shares the fabric color slot but remains independently addressable."
+    },
+    {
+      "id": "ground",
+      "name": "Warm neutral ground",
+      "type": "physical",
+      "qualityTier": "utility",
+      "shaderModel": "MeshStandardMaterial matte dielectric",
+      "baseColor": "#FCF2E2",
+      "color": "#FCF2E2",
+      "albedo": {
+        "dominant": "#FCF2E2",
+        "secondary": [
+          "#E8D3B7"
+        ],
+        "samplingNotes": "Warm off-white background/ground from reference."
+      },
+      "roughness": {
+        "base": 0.9,
+        "variation": 0.03,
+        "map": "ground-roughness",
+        "localResponse": "softens contact shadow transition"
+      },
+      "metalness": {
+        "base": 0.0,
+        "variation": 0.0
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.2,
+        "contactShadowBias": 0.2,
+        "notes": "Ground receives soft shadows."
+      },
+      "notes": "Utility material for reference-matched presentation."
+    }
+  ],
+  "repetitionSystems": [
+    {
+      "id": "glyph-instances",
+      "level": "meso",
+      "parent": "typography-layout",
+      "count": 42,
+      "primitive": "extrude",
+      "material": "fabric",
+      "instanceScale": [
+        0.42,
+        0.72,
+        0.24
+      ],
+      "placement": {
+        "mode": "text-layout",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "radius": 0.0,
+        "startAngleDeg": 0
+      },
+      "geometry": "glyph-template extruded profile",
+      "buildsGeometry": true,
+      "instances": "one stable pivot per character and punctuation mark"
+    },
+    {
+      "id": "seam-instances",
+      "level": "micro",
+      "parent": "glyph-template",
+      "count": 42,
+      "primitive": "curve-sweep",
+      "material": "seam",
+      "instanceScale": [
+        1,
+        1,
+        1
+      ],
+      "placement": {
+        "mode": "glyph-contour",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "radius": 0.0,
+        "startAngleDeg": 0
+      },
+      "geometry": "raised perimeter and counter contour",
+      "buildsGeometry": true,
+      "instances": "shared seam geometry with per-glyph transform"
+    }
+  ],
+  "buildPasses": [
+    {
+      "id": "blockout",
+      "goal": "Match phrase content, line breaks, row widths, glyph silhouettes, and negative spaces without material polish.",
+      "componentRefs": [
+        "root",
+        "typography-layout",
+        "line-top",
+        "line-middle",
+        "line-bottom",
+        "glyph-template"
+      ],
+      "acceptance": [
+        "All text is readable and spelled correctly.",
+        "Three rows match reference hierarchy.",
+        "Glyphs remain independent.",
+        "AI vision comparison score meets threshold."
+      ]
+    },
+    {
+      "id": "structural-pass",
+      "goal": "Build row groups, independent glyph pivots, counters, and seam/detail ownership.",
+      "componentRefs": [
+        "typography-layout",
+        "line-top",
+        "line-middle",
+        "line-bottom",
+        "glyph-template",
+        "seam-detail"
+      ],
+      "acceptance": [
+        "Macro, meso, and micro hierarchy is explicit.",
+        "Each glyph has a stable pivot and collider proxy.",
+        "Real counters are retained.",
+        "AI vision comparison score meets threshold."
+      ]
+    },
+    {
+      "id": "form-refinement",
+      "goal": "Refine rounded padded profiles, bevels, inflated side walls, and letter-specific silhouettes.",
+      "componentRefs": [
+        "glyph-template"
+      ],
+      "acceptance": [
+        "3/4 view shows real thickness.",
+        "Corners and counters read as soft padded forms.",
+        "AI vision comparison score meets threshold."
+      ]
+    },
+    {
+      "id": "material-pass",
+      "goal": "Match per-glyph palette, roughness, fabric normal response, seam contrast, and neutral ground.",
+      "componentRefs": [
+        "glyph-template",
+        "seam-detail",
+        "pile-relief"
+      ],
+      "acceptance": [
+        "Independent reference PBR evidence is wired for hero fabric.",
+        "Fabric does not read as plastic.",
+        "AI vision comparison score meets threshold."
+      ]
+    },
+    {
+      "id": "surface-pass",
+      "goal": "Add short-pile relief, seam cavity, AO, and controlled local material variation.",
+      "componentRefs": [
+        "seam-detail",
+        "pile-relief"
+      ],
+      "acceptance": [
+        "Grazing light reveals textile relief.",
+        "Surface detail remains stable across instances.",
+        "AI vision comparison score meets threshold."
+      ]
+    },
+    {
+      "id": "lighting-pass",
+      "goal": "Match warm product lighting while retaining readable geometry and contact shadows.",
+      "componentRefs": [
+        "root",
+        "typography-layout"
+      ],
+      "acceptance": [
+        "Key, fill, rim/environment, exposure, tone mapping, and contact shadow are explicit.",
+        "Neutral and reference-matched views are captured.",
+        "AI vision comparison score meets threshold."
+      ]
+    },
+    {
+      "id": "interaction-pass",
+      "goal": "Prepare rows and glyphs for separation, bounce, orbit, collision, and reassembly in the advertisement.",
+      "componentRefs": [
+        "typography-layout",
+        "line-top",
+        "line-middle",
+        "line-bottom",
+        "glyph-template"
+      ],
+      "acceptance": [
+        "Independent pivots, names, and collider proxies remain intact.",
+        "Row and glyph transforms are deterministic.",
+        "AI vision comparison score meets threshold."
+      ]
+    },
+    {
+      "id": "optimization-pass",
+      "goal": "Keep repeated textile detail within real-time performance budget.",
+      "componentRefs": [
+        "glyph-template",
+        "seam-detail",
+        "pile-relief"
+      ],
+      "acceptance": [
+        "Repeated geometry is shared or instanced.",
+        "60 fps target is documented and checked."
+      ]
+    }
+  ],
+  "sculptPipeline": {
+    "passGateMode": "locked-sequential",
+    "passOrder": [
+      "blockout",
+      "structural-pass",
+      "form-refinement",
+      "material-pass",
+      "surface-pass",
+      "lighting-pass",
+      "interaction-pass",
+      "optimization-pass"
+    ],
+    "currentPass": "blockout",
+    "completedPasses": [],
+    "lastCompletedPass": "",
+    "blockedReason": "",
+    "nextRequiredEvidence": [
+      "All text is readable and spelled correctly.",
+      "Three rows match reference hierarchy.",
+      "Glyphs remain independent.",
+      "AI vision comparison score meets threshold.",
+      "browser render screenshot from your agent's browser/screenshot tool",
+      "single side-by-side full reference/render comparison sheet",
+      "all critical semantic feature scores at or above their thresholds",
+      "self-correction review appended with action=continue before the next pass"
+    ]
+  },
+  "lookDevTargets": {
+    "qualityPriority": "reference-fidelity",
+    "materialPass": {
+      "albedoPaletteRequired": true,
+      "roughnessVariationRequired": true,
+      "normalOrBumpRequired": true,
+      "localOverridesRequired": true,
+      "minimumTextureResolution": 1024,
+      "preferredTextureResolution": 2048,
+      "independentMapChannels": [
+        "albedo",
+        "roughness",
+        "height",
+        "normal",
+        "ambient-occlusion"
+      ],
+      "requiredSurfaceFrequencyBands": [
+        "macro",
+        "meso",
+        "micro"
+      ],
+      "geometryReliefRequiredWhenSilhouetteAffected": true,
+      "referencePbrExtraction": {
+        "requiredWhenSourceImagePresent": true,
+        "targetThreshold": 0.7,
+        "stopOnLowConfidence": true,
+        "acceptedLimitation": "single-image extraction is reference-derived inference, not exact photogrammetry"
+      }
+    },
+    "lightingPass": {
+      "requiredTerms": [
+        "key light",
+        "fill light",
+        "rim light",
+        "environment light",
+        "exposure",
+        "tone mapping",
+        "background",
+        "contact shadow"
+      ],
+      "mustAvoid": [
+        "ambient-only lighting",
+        "flat value range",
+        "missing contact shadow"
+      ]
+    }
+  },
+  "lightingFromPhoto": [
+    "Key light: broad warm source from upper camera-left, producing soft highlights on pile and darker right-side seam response.",
+    "Fill light: low-intensity warm ambient fill keeps counters readable without flattening relief.",
+    "Rim/environment light: subtle neutral lift on upper side walls separates colorful glyphs from the cream background.",
+    "Exposure and tone mapping: neutral exposure with ACES/filmic response for saturated textile colors.",
+    "Contact shadow: soft AO/contact shadow directly below and between letters grounds each independent prop."
+  ],
+  "actionReadiness": {
+    "contract": "Every row and glyph is a stable named Object3D pivot with a mesh child, action metadata, collider proxy, and detachable grouping.",
+    "defaultRigType": "action-ready-typography-rig",
+    "rootMotionNode": "root",
+    "requiredComponentFields": [
+      "id",
+      "parent",
+      "transform",
+      "actionProfile.animationRole",
+      "actionProfile.pivot",
+      "actionProfile.collider",
+      "actionProfile.destruction"
+    ],
+    "transformChannels": [
+      "translate",
+      "rotate",
+      "scale",
+      "bend",
+      "twist",
+      "detach",
+      "visibility",
+      "material-state"
+    ],
+    "authoringRules": [
+      "Do not collapse independent glyphs into one mesh.",
+      "Put transforms on row and glyph pivots.",
+      "Use shared geometry with separate Object3D instances where performance allows.",
+      "Use compound collider proxies rather than visual mesh colliders by default."
+    ],
+    "destructionPolicy": {
+      "defaultBreakable": false,
+      "fractureGroupNaming": "row-top, row-middle, row-bottom, glyph-detachables",
+      "debrisStrategy": "Detach and animate existing glyph groups; avoid random mesh explosions."
+    }
+  },
+  "proceduralStrategy": [
+    "Use a deterministic text layout with recorded line strings and a rounded bold typeface.",
+    "Build each character as a real extruded shape with rounded bevel and actual holes for counters.",
+    "Create separate named row and glyph pivots for animation and collisions.",
+    "Add seam contours as shared curve-sweep geometry and short-pile response as independent procedural material fields.",
+    "Assign a deterministic saturated palette slot per glyph while preserving the reference sequence.",
+    "Attach a hybrid soft-body layer to each glyph: Rapier rigid proxy for collision, spring squash/stretch for visual compression, and stable base quaternions for physics-safe deformation.",
+    "Drive a GPU vertex-shell deformation field per glyph: localized bend plus front-surface dimple with deterministic origin and size uniforms, so impact reads as a real surface response rather than only a group scale.",
+    "Drive impact pulses from collision events and velocity spikes; propagate a bounded wave to nearby glyphs for readable secondary motion.",
+    "Expose per-glyph softness, bounce, squash, impact-wave and breeze controls without changing the independent root contract.",
+    "Provide a magnetic assembly controller that selects independent glyphs, flies them along staggered spring-like arcs into a word, and restores the source grid on reset.",
+    "Render with orthographic/front, 3/4, and side cameras before approving the pass."
+  ],
+  "animationAnchors": [
+    "root controls the complete typographic composition",
+    "row pivots control three-line reveal and separation",
+    "glyph pivots control bounce, orbit, collision, and magnetic reassembly",
+    "seam and pile layers inherit each glyph transform",
+    "softBody state controls compression, stretch, twist, bend, dimple, impact pulse and spring recovery",
+    "per-glyph physics metadata controls mass, friction, restitution, damping and soft-body softness"
+  ],
+  "destructionAnchors": [
+    "row groups are detachable semantic fragments",
+    "glyphs are detachable without rebuilding the inscription",
+    "seam geometry remains attached to its glyph parent"
+  ],
+  "performanceBudget": {
+    "qualityPriority": "reference-fidelity",
+    "targetTriangles": 220000,
+    "maxDrawCalls": 96,
+    "textureSize": 1024,
+    "fpsTarget": 60,
+    "optimizationPolicy": "Share glyph and seam geometry, instance repeated relief, and keep independent pivots while protecting silhouette and textile response."
+  },
+  "visualEvidence": [
+    {
+      "timestamp": "2026-08-04T07:11:17.174678+00:00",
+      "passId": "blockout",
+      "estimatedFidelity": 0.63,
+      "aiVisionScore": 0.63,
+      "visualAcceptanceThreshold": 0.7,
+      "layerScores": {},
+      "featureReviews": [],
+      "referenceScreenshot": "references/plush-lesson-plan-reference.png",
+      "renderScreenshot": "review/blockout-reference-rounded-font.png",
+      "comparisonImage": "review/comparison-blockout.png",
+      "cameraView": "front",
+      "notes": "Frontal review on warm cream background; orbit views separately confirm non-flat extruded geometry.",
+      "aiVisionNotes": "Agent-vision inspection of the side-by-side sheet: structure and volume are clear, but the middle line loses the source rhythm and the material needs a more textile response."
+    }
+  ],
+  "reviewHistory": [
+    {
+      "timestamp": "2026-08-04T07:11:17.174678+00:00",
+      "passId": "blockout",
+      "estimatedFidelity": 0.63,
+      "aiVisionScore": 0.63,
+      "visualAcceptanceThreshold": 0.7,
+      "layerScores": {},
+      "featureReviews": [],
+      "action": "refine-code",
+      "summary": "The procedural typography preserves the phrase, three-line composition, per-glyph separation, rounded extrusion, and a volumetric readable 3/4 view, but the middle line is too compressed and the surface reads more like rounded soft plastic than the reference short-pile plush.",
+      "matched": [
+        "exact phrase and punctuation",
+        "three separate rows",
+        "independent glyph meshes",
+        "rounded bevel and visible depth",
+        "saturated per-letter palette"
+      ],
+      "mismatches": [
+        "middle-row word gaps are too small",
+        "middle-row glyphs are too tall and wide",
+        "font silhouette differs from the reference",
+        "seam/fabric microdetail is subtler than the source",
+        "current colors do not follow the reference sequence closely"
+      ],
+      "specFixes": [],
+      "codeFixes": [
+        "reduce middle-row glyph height while retaining line width",
+        "increase word spacing and tune line scale",
+        "add reference-driven per-letter palette sequence",
+        "strengthen short-pile relief without making the letters plastic"
+      ],
+      "evidence": [
+        "review/comparison-blockout.png",
+        "review/blockout-reference-rounded-font.png",
+        "review/blockout-rounded-three-quarter.png",
+        "review/blockout-rounded-side.png"
+      ],
+      "reviewViewpoints": [
+        "front",
+        "three-quarter",
+        "side"
+      ],
+      "visualEvidence": {
+        "referenceScreenshot": "references/plush-lesson-plan-reference.png",
+        "renderScreenshot": "review/blockout-reference-rounded-font.png",
+        "comparisonImage": "review/comparison-blockout.png",
+        "cameraView": "front",
+        "notes": "Frontal review on warm cream background; orbit views separately confirm non-flat extruded geometry.",
+        "aiVisionNotes": "Agent-vision inspection of the side-by-side sheet: structure and volume are clear, but the middle line loses the source rhythm and the material needs a more textile response."
+      }
+    }
+  ],
+  "lodPlan": [
+    {
+      "tier": "near",
+      "distance": 0,
+      "strategy": "full padded glyph, seam, and textile response"
+    },
+    {
+      "tier": "far",
+      "distance": 18,
+      "strategy": "shared glyph geometry, reduced seam and pile detail"
+    }
+  ],
+  "risks": [
+    "Exact source font is not known; silhouette and readability are the authority.",
+    "The generated reference is a single frontal image; side-wall depth is a controlled approximation.",
+    "Individual fiber strands are represented procedurally, not physically simulated.",
+    "Soft-body deformation is a controlled visual spring over rigid Rapier proxies; it is intentionally stable and art-directable rather than a full finite-element cloth solver."
+  ],
+  "localSpecSearch": {
+    "collection": "core_3d",
+    "query": "plush textile padded letter geometry chenille velour fabric roughness stitching rounded extruded glyph typography animation",
+    "evidence": [
+      "assessment.json",
+      "review/material-evidence/report.json"
+    ]
+  },
+  "tier1Results": [
+    {
+      "passed": false,
+      "checks": {
+        "silhouetteIoU": 0.4895,
+        "aspectRatioDelta": 0.2593,
+        "scaleDelta": 0.4519,
+        "bilateralSymmetryError": 0.0031,
+        "colorDelta": {
+          "checked": 3,
+          "maxDeltaE": 34.44,
+          "perComponent": [
+            {
+              "componentId": null,
+              "deltaE": 16.78
+            },
+            {
+              "componentId": null,
+              "deltaE": 34.44
+            },
+            {
+              "componentId": null,
+              "deltaE": 16.78
+            }
+          ],
+          "gated": false
+        }
+      },
+      "failures": [
+        "silhouette IoU 0.489 is below threshold 0.85",
+        "aspect-ratio delta 0.259 exceeds threshold 0.05",
+        "scale delta 0.452 exceeds threshold 0.08",
+        "blockout requires --map-stripped-render evidence"
+      ],
+      "renderHash": "73134cfafaadd60a",
+      "passId": "blockout"
+    },
+    {
+      "passed": false,
+      "checks": {
+        "silhouetteIoU": 0.5593,
+        "aspectRatioDelta": 0.0926,
+        "scaleDelta": 0.0926,
+        "bilateralSymmetryError": 0.1138,
+        "colorDelta": {
+          "checked": 3,
+          "maxDeltaE": 34.11,
+          "perComponent": [
+            {
+              "componentId": null,
+              "deltaE": 15.24
+            },
+            {
+              "componentId": null,
+              "deltaE": 34.11
+            },
+            {
+              "componentId": null,
+              "deltaE": 15.24
+            }
+          ],
+          "gated": false
+        }
+      },
+      "failures": [
+        "silhouette IoU 0.559 is below threshold 0.85",
+        "aspect-ratio delta 0.093 exceeds threshold 0.05",
+        "scale delta 0.093 exceeds threshold 0.08"
+      ],
+      "renderHash": "1091d26073443ab4",
+      "passId": "blockout",
+      "mapStrippedRender": "review/blockout-reference-front.png"
+    },
+    {
+      "passed": false,
+      "checks": {
+        "silhouetteIoU": 0.5994,
+        "aspectRatioDelta": 0.005,
+        "scaleDelta": 0.0324,
+        "bilateralSymmetryError": 0.0996,
+        "colorDelta": {
+          "checked": 3,
+          "maxDeltaE": 34.95,
+          "perComponent": [
+            {
+              "componentId": null,
+              "deltaE": 14.45
+            },
+            {
+              "componentId": null,
+              "deltaE": 34.95
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.45
+            }
+          ],
+          "gated": false
+        }
+      },
+      "failures": [
+        "silhouette IoU 0.599 is below threshold 0.85"
+      ],
+      "renderHash": "79c9738d248b418a",
+      "passId": "blockout",
+      "mapStrippedRender": "review/blockout-reference-rounded-font.png"
+    },
+    {
+      "passed": false,
+      "checks": {
+        "silhouetteIoU": 0.5985,
+        "aspectRatioDelta": 0.005,
+        "scaleDelta": 0.0324,
+        "bilateralSymmetryError": 0.1003,
+        "colorDelta": {
+          "checked": 3,
+          "maxDeltaE": 34.97,
+          "perComponent": [
+            {
+              "componentId": null,
+              "deltaE": 14.46
+            },
+            {
+              "componentId": null,
+              "deltaE": 34.97
+            },
+            {
+              "componentId": null,
+              "deltaE": 14.46
+            }
+          ],
+          "gated": false
+        }
+      },
+      "failures": [
+        "silhouette IoU 0.599 is below threshold 0.85"
+      ],
+      "renderHash": "ecc245498b78a288",
+      "passId": "blockout",
+      "mapStrippedRender": "review/blockout-reference-rounded-font.png"
+    },
+    {
+      "passed": false,
+      "checks": {
+        "silhouetteIoU": 0.7237,
+        "aspectRatioDelta": 0.022,
+        "scaleDelta": 0.0034,
+        "bilateralSymmetryError": 0.1118,
+        "colorDelta": {
+          "checked": 3,
+          "maxDeltaE": 37.69,
+          "perComponent": [
+            {
+              "componentId": null,
+              "deltaE": 17.25
+            },
+            {
+              "componentId": null,
+              "deltaE": 37.69
+            },
+            {
+              "componentId": null,
+              "deltaE": 17.25
+            }
+          ],
+          "gated": false
+        }
+      },
+      "failures": [
+        "silhouette IoU 0.724 is below threshold 0.85",
+        "blockout requires --map-stripped-render evidence"
+      ],
+      "renderHash": "a043476f9c0a69f6",
+      "passId": "blockout"
+    },
+    {
+      "passed": false,
+      "checks": {
+        "silhouetteIoU": 0.7228,
+        "aspectRatioDelta": 0.0285,
+        "scaleDelta": 0.0097,
+        "bilateralSymmetryError": 0.1142,
+        "colorDelta": {
+          "checked": 3,
+          "maxDeltaE": 38.22,
+          "perComponent": [
+            {
+              "componentId": null,
+              "deltaE": 13.02
+            },
+            {
+              "componentId": null,
+              "deltaE": 38.22
+            },
+            {
+              "componentId": null,
+              "deltaE": 13.02
+            }
+          ],
+          "gated": false
+        }
+      },
+      "failures": [
+        "silhouette IoU 0.723 is below threshold 0.85",
+        "blockout requires --map-stripped-render evidence"
+      ],
+      "renderHash": "69324b3673793329",
+      "passId": "blockout"
+    },
+    {
+      "passed": false,
+      "checks": {
+        "silhouetteIoU": 0.7228,
+        "aspectRatioDelta": 0.0285,
+        "scaleDelta": 0.0097,
+        "bilateralSymmetryError": 0.1142,
+        "colorDelta": {
+          "checked": 3,
+          "maxDeltaE": 38.22,
+          "perComponent": [
+            {
+              "componentId": null,
+              "deltaE": 13.02
+            },
+            {
+              "componentId": null,
+              "deltaE": 38.22
+            },
+            {
+              "componentId": null,
+              "deltaE": 13.02
+            }
+          ],
+          "gated": false
+        }
+      },
+      "failures": [
+        "silhouette IoU 0.723 is below threshold 0.85"
+      ],
+      "renderHash": "69324b3673793329",
+      "passId": "blockout",
+      "mapStrippedRender": "review/blockout-dark-front.png"
+    },
+    {
+      "passed": false,
+      "checks": {
+        "silhouetteIoU": 0.4892,
+        "aspectRatioDelta": 0.2593,
+        "scaleDelta": 0.4519,
+        "bilateralSymmetryError": 0.0,
+        "colorDelta": {
+          "checked": 3,
+          "maxDeltaE": 36.86,
+          "perComponent": [
+            {
+              "componentId": null,
+              "deltaE": 30.04
+            },
+            {
+              "componentId": null,
+              "deltaE": 36.86
+            },
+            {
+              "componentId": null,
+              "deltaE": 30.04
+            }
+          ],
+          "gated": false
+        }
+      },
+      "failures": [
+        "silhouette IoU 0.489 is below threshold 0.85",
+        "aspect-ratio delta 0.259 exceeds threshold 0.05",
+        "scale delta 0.452 exceeds threshold 0.08",
+        "blockout requires --map-stripped-render evidence"
+      ],
+      "renderHash": "8b98b848b1080b6e",
+      "passId": "blockout"
+    }
+  ]
+}

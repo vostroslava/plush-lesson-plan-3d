@@ -1,0 +1,64 @@
+.overlay-page {
+  background: #08070b;
+}
+
+.overlay-page #source-video,
+.overlay-page #overlay-app,
+.overlay-page #overlay-app canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-page #source-video {
+  z-index: 0;
+  display: block;
+  object-fit: cover;
+  background: #08070b;
+}
+
+.overlay-page #overlay-app {
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.overlay-page #overlay-app canvas {
+  display: block;
+}
+
+.overlay-toolbar {
+  position: fixed;
+  z-index: 4;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 999px;
+  color: rgb(255 255 255 / 78%);
+  background: rgb(8 7 11 / 68%);
+  font: 11px/1.2 Inter, ui-sans-serif, system-ui, sans-serif;
+  backdrop-filter: blur(10px);
+}
+
+.overlay-toolbar button {
+  border: 1px solid rgb(255 255 255 / 38%);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #fff7f1;
+  background: rgb(255 255 255 / 10%);
+  cursor: pointer;
+  font: inherit;
+}
+
+.overlay-toolbar button:hover {
+  border-color: #ff9aca;
+  background: rgb(255 154 202 / 24%);
+}
+
+.overlay-page:not(.debug) [data-debug-only] {
+  display: none;
+}

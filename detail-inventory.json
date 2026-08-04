@@ -1,0 +1,121 @@
+{
+  "sourceImage": "references/plush-lesson-plan-reference.png",
+  "zonesDir": "review",
+  "detailInventory": {
+    "scanMethod": "grid-3x3 plus semantic typography zones",
+    "targetMinDetails": 10,
+    "details": [
+      {
+        "id": "line-1-teachers",
+        "kind": "inscription-layout",
+        "description": "Top row reads TEACHERS: in large rounded padded glyphs, with the colon as two separate circular plush dots.",
+        "region": {"x": 0.06, "y": 0.13, "width": 0.89, "height": 0.28, "units": "normalized"},
+        "scale": "macro",
+        "affects": "silhouette, text legibility, row spacing",
+        "mapsTo": {"type": "component.localFeatures", "ref": "typography.line1"},
+        "evidenceRef": "full-object/top-row",
+        "confidence": 0.99
+      },
+      {
+        "id": "line-2-lesson",
+        "kind": "inscription-layout",
+        "description": "Middle row reads HOW TO CREATE A LESSON PLAN and spans almost the full width with tighter inter-letter spacing.",
+        "region": {"x": 0.02, "y": 0.46, "width": 0.96, "height": 0.18, "units": "normalized"},
+        "scale": "macro",
+        "affects": "overall width, rhythm, readability",
+        "mapsTo": {"type": "component.localFeatures", "ref": "typography.line2"},
+        "evidenceRef": "full-object/middle-row",
+        "confidence": 0.99
+      },
+      {
+        "id": "line-3-seconds",
+        "kind": "inscription-layout",
+        "description": "Bottom row reads IN 30 SECONDS with a centered, shorter composition and larger visible gaps around the numeral group.",
+        "region": {"x": 0.12, "y": 0.68, "width": 0.76, "height": 0.19, "units": "normalized"},
+        "scale": "macro",
+        "affects": "vertical hierarchy, line balance",
+        "mapsTo": {"type": "component.localFeatures", "ref": "typography.line3"},
+        "evidenceRef": "full-object/bottom-row",
+        "confidence": 0.99
+      },
+      {
+        "id": "rounded-pillow-profile",
+        "kind": "geometry-profile",
+        "description": "Every glyph is a separate extruded profile with inflated rounded corners and a soft padded front-to-side transition.",
+        "region": {"x": 0.02, "y": 0.13, "width": 0.96, "height": 0.74, "units": "normalized"},
+        "scale": "macro-to-meso",
+        "affects": "recognition, depth readability, collision volume",
+        "mapsTo": {"type": "component.localFeatures", "ref": "glyph.paddedExtrusion"},
+        "evidenceRef": "full-object/glyph-edges",
+        "confidence": 0.96
+      },
+      {
+        "id": "perimeter-stitching",
+        "kind": "seam",
+        "description": "A darker raised stitched border follows the outside contour of each letter and the inside contour of holes.",
+        "region": {"x": 0.05, "y": 0.14, "width": 0.91, "height": 0.72, "units": "normalized"},
+        "scale": "micro",
+        "affects": "material identity, edge definition",
+        "mapsTo": {"type": "material.localOverrides", "ref": "fabric.seamAndCavity"},
+        "evidenceRef": "full-object/letter-contours",
+        "confidence": 0.91
+      },
+      {
+        "id": "short-pile-relief",
+        "kind": "surface-relief",
+        "description": "The front faces show fine short-pile textile relief with a broad matte highlight and darker compressed edge band.",
+        "region": {"x": 0.05, "y": 0.14, "width": 0.91, "height": 0.72, "units": "normalized"},
+        "scale": "micro",
+        "affects": "roughness, normal/bump, close-up tactile read",
+        "mapsTo": {"type": "material.localOverrides", "ref": "fabric.shortPileRelief"},
+        "evidenceRef": "full-object/front-faces",
+        "confidence": 0.88
+      },
+      {
+        "id": "per-letter-palette",
+        "kind": "color-system",
+        "description": "Adjacent glyphs alternate saturated red, orange, yellow, green, blue, purple, pink, and turquoise base colors.",
+        "region": {"x": 0.02, "y": 0.13, "width": 0.96, "height": 0.74, "units": "normalized"},
+        "scale": "meso",
+        "affects": "visual rhythm and grouping",
+        "mapsTo": {"type": "material.localOverrides", "ref": "fabric.perGlyphAlbedo"},
+        "evidenceRef": "full-object/color-sequence",
+        "confidence": 0.98
+      },
+      {
+        "id": "glyph-negative-spaces",
+        "kind": "negative-space",
+        "description": "Counters in A, C, O, P, and other glyphs remain open and are bounded by the same rounded textile profile.",
+        "region": {"x": 0.02, "y": 0.13, "width": 0.96, "height": 0.74, "units": "normalized"},
+        "scale": "meso",
+        "affects": "letter recognition and shadow placement",
+        "mapsTo": {"type": "component.localFeatures", "ref": "glyph.realCounters"},
+        "evidenceRef": "full-object/letter-counters",
+        "confidence": 0.96
+      },
+      {
+        "id": "contact-shadow-set",
+        "kind": "lighting-response",
+        "description": "Soft diffuse shadows sit immediately below and between glyphs, separating each letter from the warm ground plane.",
+        "region": {"x": 0.02, "y": 0.15, "width": 0.96, "height": 0.74, "units": "normalized"},
+        "scale": "macro-to-meso",
+        "affects": "grounding, depth and object separation",
+        "mapsTo": {"type": "material.localOverrides", "ref": "lighting.softContactShadow"},
+        "evidenceRef": "full-object/grounding",
+        "confidence": 0.94
+      },
+      {
+        "id": "front-reference-camera",
+        "kind": "camera-framing",
+        "description": "The composition is presented nearly orthographically from the front, with minimal perspective distortion and all rows fully visible.",
+        "region": {"x": 0.0, "y": 0.0, "width": 1.0, "height": 1.0, "units": "normalized"},
+        "scale": "macro",
+        "affects": "reference comparison and text legibility",
+        "mapsTo": {"type": "component.localFeatures", "ref": "scene.referenceCamera"},
+        "evidenceRef": "full-object/full-frame",
+        "confidence": 0.95
+      }
+    ]
+  },
+  "authoringInstruction": "Each detail is linked to a planned component.localFeatures or material.localOverrides entry and must be verified in the final spec."
+}

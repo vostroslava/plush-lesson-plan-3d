@@ -1,0 +1,14 @@
+node_modules/
+dist/
+work/
+review/
+.DS_Store
+
+# Large local-only source and intermediate renders.
+source/iphone-green-screen.mov
+delivery/lesson-plan-30s-plush-hook-preview*.mp4
+delivery/phone/iphone-aidemia-screen-alpha-6s.mov
+
+# Scratch reference files.
+references/test.bin
+references/test2.bin

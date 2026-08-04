@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Aidemia phone screen</title>
+  </head>
+  <body class="phone-page">
+    <main class="phone-workbench">
+      <header class="workbench-header">
+        <div>
+          <div class="workbench-eyebrow">AIDEMIA / PHONE PRODUCT PROOF</div>
+          <h1>Our lesson planner,<br />inside the phone.</h1>
+          <p class="workbench-copy">
+            A controlled local reconstruction of the mobile Aidemia surface, ready to
+            place behind the green-screen phone render.
+          </p>
+        </div>
+        <div class="source-badge"><span></span> controlled reconstruction</div>
+      </header>
+
+      <section class="phone-layout">
+        <div class="phone-preview-column">
+          <div class="preview-meta">
+            <span>EDITABLE SCREEN SOURCE</span>
+            <span>360 × 820 CSS px</span>
+          </div>
+          <div class="device-shadow">
+            <div class="mock-device" aria-label="Aidemia mobile app mockup">
+              <div class="mock-screen" id="phone-screen">
+                <header class="site-topbar">
+                  <div class="site-mark" aria-label="Aidemia">
+                    <span class="site-mark-ring"></span>
+                    <span class="site-mark-tail"></span>
+                  </div>
+                  <div class="site-actions" aria-label="Aidemia navigation">
+                    <span class="site-action info">Info</span>
+                    <span class="site-action pro">Pro</span>
+                    <span class="site-language"><span class="flag">🇺🇸</span> En <span class="chevron">⌄</span></span>
+                    <span class="site-avatar" aria-hidden="true"><i></i><b></b></span>
+                  </div>
+                </header>
+
+                <main class="screen-main">
+                  <div class="screen-kicker">AI LESSON PLANNER</div>
+                  <div class="screen-heading-row">
+                    <div>
+                      <h2>Create a lesson plan</h2>
+                      <p>From idea to ready-to-teach in 30 seconds.</p>
+                    </div>
+                    <div class="sparkle" aria-hidden="true">✦</div>
+                  </div>
+
+                  <section class="planner-card" aria-label="Lesson plan form">
+                    <label class="planner-field planner-field-wide">
+                      <span>TOPIC</span>
+                      <input id="screen-topic" data-screen-field="topic" value="Photosynthesis in plants" />
+                      <b>›</b>
+                    </label>
+                    <div class="planner-field-row">
+                      <label class="planner-field">
+                        <span>GRADE</span>
+                        <input id="screen-grade" data-screen-field="grade" value="7th grade" />
+                      </label>
+                      <label class="planner-field">
+                        <span>TIME</span>
+                        <input id="screen-time" data-screen-field="time" value="45 minutes" />
+                      </label>
+                    </div>
+                    <div class="outline-card">
+                      <div class="outline-title">Your lesson outline</div>
+                      <div class="outline-item purple"><i>1</i><span><b>Engage</b><small>Hook students with a question</small></span></div>
+                      <div class="outline-item green"><i>2</i><span><b>Explore</b><small>Build a simple visual example</small></span></div>
+                      <div class="outline-item yellow"><i>3</i><span><b>Apply</b><small>Finish with a short worksheet</small></span></div>
+                    </div>
+                    <button id="screen-generate" class="generate-button" type="button">Generate plan</button>
+                  </section>
+                  <div class="screen-note"><span></span> Editable · Ready to teach · AIDEMIA</div>
+                </main>
+
+                <nav class="site-bottom-nav" aria-label="Aidemia mobile navigation">
+                  <span><b>▣</b><small>Home</small></span>
+                  <span><b>♧</b><small>Tools</small></span>
+                  <span><b>▤</b><small>Files</small></span>
+                  <span class="active"><b>▤</b><small>Forum</small></span>
+                  <span><b>•••</b><small>Helper✦</small></span>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <p class="preview-note">The screen is a real DOM surface. The six-second export uses the same copy, captured locally and composited under the phone's keyed foreground.</p>
+        </div>
+
+        <aside class="phone-inspector" aria-label="Phone screen inspector">
+          <div class="inspector-eyebrow">SCREEN INSPECTOR</div>
+          <h2>Change the proof<br />without touching the phone.</h2>
+          <p class="inspector-copy">Edit the content here, then capture the same screen into the render. No login state or external session is copied.</p>
+
+          <label class="inspector-field">
+            <span>Topic</span>
+            <input id="edit-topic" value="Photosynthesis in plants" />
+          </label>
+          <div class="inspector-field-row">
+            <label class="inspector-field">
+              <span>Grade</span>
+              <input id="edit-grade" value="7th grade" />
+            </label>
+            <label class="inspector-field">
+              <span>Time</span>
+              <input id="edit-time" value="45 minutes" />
+            </label>
+          </div>
+          <button id="reset-screen" class="inspector-button secondary" type="button">Reset screen copy</button>
+          <button id="generate-screen" class="inspector-button" type="button">Preview interaction</button>
+
+          <div class="render-card">
+            <div class="render-card-label">RENDERED PHONE PREVIEW</div>
+            <video id="rendered-preview" controls muted loop playsinline preload="metadata" src="./delivery/phone/iphone-aidemia-screen-preview-6s.mp4"></video>
+            <a id="rendered-preview-link" href="./delivery/phone/iphone-aidemia-screen-preview-6s.mp4" target="_blank" rel="noreferrer">Open six-second MP4 ↗</a>
+          </div>
+          <div id="phone-status" class="phone-status">Screen source ready · local DOM</div>
+        </aside>
+      </section>
+    </main>
+    <script type="module" src="/src/phone.js"></script>
+  </body>
+</html>
