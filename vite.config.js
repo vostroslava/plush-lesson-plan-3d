@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(process.cwd(), 'index.html'),
         overlay: resolve(process.cwd(), 'overlay.html'),
+        ad: resolve(process.cwd(), 'ad.html'),
         benchmark: resolve(process.cwd(), 'benchmark.html'),
         alphabet: resolve(process.cwd(), 'alphabet.html'),
         phone: resolve(process.cwd(), 'phone.html'),

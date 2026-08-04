@@ -854,6 +854,7 @@ export async function createPlushTypography({ phrase, layout = 'default' }) {
 export async function createPlushAlphabet({
   letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,!?;:()[]{}+-=/%&@#*',
   characters,
+  preserveDuplicates = false,
   size = 0.60,
   editableColor = true,
   textureSize = 512,
@@ -877,7 +878,9 @@ export async function createPlushAlphabet({
   const sourceCharacters = characters ?? letters;
   root.userData.sourcePhrase = sourceCharacters;
   const normalizedLetters = [...sourceCharacters].filter((character, index, list) => (
-    character !== ' ' && list.indexOf(character) === index && font.charToGlyph(character)?.unicode
+    character !== ' '
+    && (preserveDuplicates || list.indexOf(character) === index)
+    && font.charToGlyph(character)?.unicode
   )).join('');
   const rows = [];
   for (let index = 0; index < normalizedLetters.length; index += columns) {
