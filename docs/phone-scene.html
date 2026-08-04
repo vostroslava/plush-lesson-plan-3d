@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Aidemia · static phone hero</title>
+    <script type="module" crossorigin src="/plush-lesson-plan-3d/assets/phoneScene-DBXYqjEK.js"></script>
+    <link rel="modulepreload" crossorigin href="/plush-lesson-plan-3d/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/plush-lesson-plan-3d/assets/createPlushTypography-xyEFYWQE.js">
+    <link rel="modulepreload" crossorigin href="/plush-lesson-plan-3d/assets/OrbitControls-By7FPvRD.js">
+    <link rel="stylesheet" crossorigin href="/plush-lesson-plan-3d/assets/phoneScene-BF7uNgfY.css">
+  </head>
+  <body class="phone-scene-page">
+    <main class="phone-scene-shell">
+      <section class="phone-stage" aria-label="Static 3D phone hero">
+        <div id="phone-canvas" class="phone-canvas"></div>
+        <div class="stage-caption">
+          <span class="stage-kicker">AIDEMIA / 3D PROP LIBRARY</span>
+          <h1>Real lesson planning,<br />inside the phone.</h1>
+          <p>Static hero build · replaceable chroma screen · independent plush props</p>
+        </div>
+        <div class="stage-status" id="scene-status">BUILDING PROCEDURAL HERO…</div>
+      </section>
+
+      <aside class="phone-scene-controls" aria-label="3D phone scene controls">
+        <div class="controls-kicker">STATIC PHONE HERO</div>
+        <h2>Phone as a<br />real 3D prop.</h2>
+        <p class="controls-copy">
+          This is the clean base scene: no rotating reference video. The green display is a named slot for the real Aidemia interface later.
+        </p>
+
+        <div class="control-group">
+          <span class="control-label">VIEW / STATIC CAMERA</span>
+          <div class="segmented" role="group" aria-label="Camera view">
+            <button class="view-button is-active" data-view="front" type="button">Front</button>
+            <button class="view-button" data-view="three-quarter" type="button">3/4</button>
+            <button class="view-button" data-view="side" type="button">Side</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <span class="control-label">SCREEN SLOT</span>
+          <div class="screen-control">
+            <label>
+              <span>Chroma color</span>
+              <input id="screen-color" type="color" value="#18ff26" />
+            </label>
+            <button id="screen-reset" class="control-button secondary" type="button">Reset green</button>
+          </div>
+          <p class="control-note">Keep green for keying. Later the DOM/app texture mounts on this exact plane.</p>
+        </div>
+
+        <div class="control-group letter-control-group">
+          <span class="control-label">PLUSH PROPS / INDIVIDUAL</span>
+          <div class="letter-row">
+            <button class="letter-button" data-letter="A" type="button">A</button>
+            <button class="letter-button" data-letter="B" type="button">B</button>
+            <button class="letter-button" data-letter="O" type="button">O</button>
+            <button class="letter-button" data-letter="D" type="button">D</button>
+          </div>
+          <label class="range-label" for="letter-scale">Selected letter scale <output id="letter-scale-value">1.00</output></label>
+          <input id="letter-scale" type="range" min="0.65" max="1.35" step="0.01" value="1" />
+          <p id="selected-letter" class="control-note">Select a letter to edit its scale and color.</p>
+        </div>
+
+        <div class="control-group scene-facts">
+          <span class="control-label">SCENE FACTS</span>
+          <dl>
+            <div><dt>PHONE</dt><dd>separate shell stack</dd></div>
+            <div><dt>SCREEN</dt><dd>emissive replacement slot</dd></div>
+            <div><dt>LETTERS</dt><dd>4 independent plush roots</dd></div>
+            <div><dt>CAMERA</dt><dd>static / orbit review only</dd></div>
+          </dl>
+        </div>
+
+        <div class="control-actions">
+          <button id="reset-scene" class="control-button secondary" type="button">Reset scene</button>
+          <button id="focus-screen" class="control-button" type="button">Focus screen slot</button>
+        </div>
+        <div class="runtime-badge"><span></span><span id="runtime-label">LOADING OBJECT TREE</span></div>
+      </aside>
+    </main>
+  </body>
+</html>

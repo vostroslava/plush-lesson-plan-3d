@@ -14,8 +14,9 @@
 - [знаки](https://vostroslava.github.io/plush-lesson-plan-3d/alphabet.html?page=symbols)
 - [overlay поверх видео](https://vostroslava.github.io/plush-lesson-plan-3d/overlay.html?debug=1)
 
-Публикация запускается автоматически из `.github/workflows/deploy-pages.yml` при
-изменениях в `main`.
+Pages публикуется из папки `docs` ветки `main`. Чтобы обновить preview после
+изменений, выполните `VITE_BASE=/plush-lesson-plan-3d/ npm run build`, затем
+скопируйте содержимое `dist/` в `docs/` и отправьте изменения в `main`.
 
 ## Назначение
 

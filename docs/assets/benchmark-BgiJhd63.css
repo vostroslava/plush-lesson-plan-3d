@@ -1,0 +1,1 @@
+.benchmark-page{width:100%;height:100%;margin:0;overflow:hidden;background:#08070b}.benchmark-page #benchmark-video{position:fixed;width:1px;height:1px;opacity:0;pointer-events:none}.benchmark-page #benchmark-app,.benchmark-page #benchmark-app canvas{position:fixed;inset:0;width:100%;height:100%}.benchmark-page #benchmark-app canvas{display:block}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Plush alphabet library</title>
+    <script type="module" crossorigin src="/plush-lesson-plan-3d/assets/alphabet-Da8T6bWG.js"></script>
+    <link rel="modulepreload" crossorigin href="/plush-lesson-plan-3d/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/plush-lesson-plan-3d/assets/createPlushTypography-xyEFYWQE.js">
+    <link rel="modulepreload" crossorigin href="/plush-lesson-plan-3d/assets/OrbitControls-By7FPvRD.js">
+    <link rel="modulepreload" crossorigin href="/plush-lesson-plan-3d/assets/rapier-CKC5f6tm.js">
+    <link rel="stylesheet" crossorigin href="/plush-lesson-plan-3d/assets/alphabet-C7WZCusD.css">
+  </head>
+  <body class="alphabet-page">
+    <div id="alphabet-app" aria-label="Interactive plush alphabet"></div>
+    <aside class="alphabet-ui" aria-label="Plush alphabet controls">
+      <div class="alphabet-eyebrow">AID / PLUSH ALPHABET</div>
+      <h1>All letters.<br />One tactile system.</h1>
+      <p class="alphabet-intro">The same plush system for letters, numbers and production signs.</p>
+
+      <nav class="alphabet-pages" aria-label="Glyph pages">
+        <a data-page="letters" href="./alphabet.html?page=letters">A–Z</a>
+        <a data-page="numbers" href="./alphabet.html?page=numbers">0–9</a>
+        <a data-page="symbols" href="./alphabet.html?page=symbols">Signs</a>
+      </nav>
+
+      <label class="control-row">
+        <span>Letter</span>
+        <select id="alphabet-letter" aria-label="Selected letter"></select>
+      </label>
+      <label class="control-row">
+        <span>Magnetic word</span>
+        <input id="alphabet-word" type="text" value="TEACHERS" maxlength="16" aria-label="Magnetic word" />
+      </label>
+      <div class="alphabet-actions alphabet-word-action">
+        <button id="assemble-word" type="button">Assemble word</button>
+      </div>
+      <label class="control-row">
+        <span>Color</span>
+        <input id="alphabet-color" type="color" value="#e8839e" aria-label="Letter color" />
+      </label>
+      <label class="control-row control-range">
+        <span>Size <output id="alphabet-scale-value">1.00×</output></span>
+        <input id="alphabet-scale" type="range" min="0.55" max="1.55" step="0.01" value="1" />
+      </label>
+      <label class="control-row control-range">
+        <span>Thickness <output id="alphabet-depth-value">1.00×</output></span>
+        <input id="alphabet-depth" type="range" min="0.55" max="1.75" step="0.01" value="1" />
+      </label>
+      <label class="control-row control-range">
+        <span>Softness <output id="alphabet-softness-value">0.74</output></span>
+        <input id="alphabet-softness" type="range" min="0.05" max="1" step="0.01" value="0.74" />
+      </label>
+      <label class="control-row control-range">
+        <span>Bounce <output id="alphabet-bounce-value">0.22</output></span>
+        <input id="alphabet-bounce" type="range" min="0.05" max="0.92" step="0.01" value="0.22" />
+      </label>
+
+      <div class="alphabet-actions">
+        <button id="apply-color" type="button">Apply color</button>
+        <button id="apply-all" type="button">Color all</button>
+        <button id="randomize" type="button">New palette</button>
+      </div>
+      <div class="alphabet-actions">
+        <button id="drop-letters" type="button">Drop physics</button>
+        <button id="reset-letters" type="button">Reset</button>
+      </div>
+      <div class="alphabet-actions alphabet-effects">
+        <button id="squish-letter" type="button">Squish</button>
+        <button id="impact-wave" type="button">Impact wave</button>
+        <button id="wind-toggle" type="button">Breeze on</button>
+      </div>
+      <div class="alphabet-actions alphabet-showcase">
+        <button id="showcase" type="button">Run tactile showcase</button>
+      </div>
+      <p class="alphabet-status" id="alphabet-status">Glyph library · hero detail · individual physics</p>
+      <p class="alphabet-hint">Drag to orbit · click a letter to push it · every glyph has a soft-body response</p>
+    </aside>
+  </body>
+</html>
