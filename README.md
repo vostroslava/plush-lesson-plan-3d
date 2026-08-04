@@ -13,7 +13,6 @@
 - [цифры](https://vostroslava.github.io/plush-lesson-plan-3d/alphabet.html?page=numbers)
 - [знаки](https://vostroslava.github.io/plush-lesson-plan-3d/alphabet.html?page=symbols)
 - [overlay поверх видео](https://vostroslava.github.io/plush-lesson-plan-3d/overlay.html?debug=1)
-- [30-секундный ad preview](https://vostroslava.github.io/plush-lesson-plan-3d/ad.html)
 
 Pages публикуется из папки `docs` ветки `main`. Чтобы обновить preview после
 изменений, выполните `VITE_BASE=/plush-lesson-plan-3d/ npm run build`, затем
@@ -48,8 +47,6 @@ Pages публикуется из папки `docs` ветки `main`. Чтоб�
   переиспользуемых букв, цифр и production-знаков;
 - `phone.html` + `src/phone.js` — редактируемый мобильный экран Aidemia,
   подготовленный для вставки в green-screen phone footage;
-- `ad.html` + `src/ad.js` — вертикальный 30-секундный продающий preview для
-  американских учителей: `TEACHERS → INPUT → DRAFT → EDIT → CTA`;
 - `review/` — скриншоты и решения по QA;
 - `delivery/` — подтверждённые экспортируемые результаты;
 - `.img2threejs/` — состояние quality-gated пайплайна.
